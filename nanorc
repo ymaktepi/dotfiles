@@ -1,0 +1,9 @@
+set tabsize "4"
+set tabstospaces
+set autoindent
+
+unset morespace
+set smarthome
+set smooth
+set nohelp
+
