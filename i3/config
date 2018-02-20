@@ -189,10 +189,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # run xprop
 # click on the app
 # get the second parameter of WM_CLASS(STRING) = "Navigator", "Firefox"
-assign [class="Firefox"] $ws2
 
 assign [class="TelegramDesktop"] $ws10
-assign [class="Atom"] $ws3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -285,9 +283,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # install feh
 exec_always feh --bg-scale ~/Pictures/wallpaper.png
 
-exec firefox
-
-exec --no-startup-id xautolock -time 10 -locker '~/.config/i3/lock.sh'
+exec --no-startup-id xautolock -time 1 -locker '~/.config/i3/blue_lock.sh'
 
 exec --no-startup-id compton
 
@@ -301,3 +297,6 @@ exec --no-startup-id synology-cloud-station-drive
 
 exec --no-startup-id xset b off
 exec --no-startup-id xset b 0 0 0
+
+# wifi applet
+exec --no-startup-id nm-applet
