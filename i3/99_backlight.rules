@@ -1,0 +1,9 @@
+#udev rules, put in:
+#/etc/udev/rules.d
+
+# you can change KERNEL name (cf /sys/class/backlight/....)
+# have to add the user to the video group
+# usermod -a -G video $USER
+ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="intel_backlight", RUN+="/bin/chgrp video /sys/class/backlight/%k/brightness"
+ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="intel_backlight", RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"
+
