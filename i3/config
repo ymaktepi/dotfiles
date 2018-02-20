@@ -293,3 +293,6 @@ exec --no-startup-id telegram-desktop
 exec --no-startup-id synology-cloud-station-drive
 
 # exec ~/.screenlayout/both_monitors.sh
+
+exec --no-startup-id xset b off
+exec --no-startup-id xset b 0 0 0
