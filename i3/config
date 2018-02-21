@@ -253,7 +253,7 @@ client.unfocused            $lighter_grey1  $lighter_grey1  $lighter_grey2  $lig
 client.urgent               $lighter_grey1  $light_red      $dark_grey      $light_orange
 
 #bindsym $mod+l exec i3lock -k --blur=1 --veriftext="" --insidevercolor=00000000 --insidewrongcolor=00000000 --insidecolor=00000000 --ringvercolor=00000000 --ringwrongcolor=00000000 --ringcolor=00000000 --linecolor=00000000 --keyhlcolor=000000ff --verifcolor=00000000 --wrongcolor=00000000
-bindsym $mod+l exec ~/.config/i3/lock.sh
+bindsym $mod+l exec ~/.config/i3/blue_lock.sh
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
