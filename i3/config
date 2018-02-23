@@ -238,7 +238,7 @@ bar {
               statusline $light_grey
 #                                   border      background      text
               focused_workspace     $grey       $grey           $white
-              active_workspace      $grey       $lighter_grey1  $lighter_grey2
+              active_workspace      $lighter_grey2  $grey  $lighter_grey2
               inactive_workspace    $grey       $grey           $lighter_grey2
               urgent_workspace      $grey       $grey           $light_red
     }
