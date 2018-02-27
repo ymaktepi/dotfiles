@@ -285,7 +285,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # install feh
 exec_always feh --bg-scale ~/Pictures/wallpaper.png
 
-exec --no-startup-id xautolock -time 1 -locker '~/.config/i3/blue_lock.sh'
+exec --no-startup-id xautolock -time 5 -locker '~/.config/i3/blue_lock.sh'
 
 exec --no-startup-id compton
 
