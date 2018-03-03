@@ -191,6 +191,11 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # get the second parameter of WM_CLASS(STRING) = "Navigator", "Firefox"
 
 assign [class="TelegramDesktop"] $ws10
+assign [class="Skype"] $ws10
+for_window [class="Skype"] floating disable
+
+assign [class="Slack"] $ws10
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -292,6 +297,7 @@ exec --no-startup-id compton
 exec --no-startup-id dropbox start
 
 exec --no-startup-id telegram-desktop
+#exec --no-startup-id slack
 
 exec --no-startup-id synology-cloud-station-drive
 
