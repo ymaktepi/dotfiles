@@ -31,8 +31,6 @@ set $argb_white argb:EEffffff
 set $argb_light_red argb:EEee829f
 set $argb_light_orange argb:EEfcc09e
 
-set $argb_
-
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -184,6 +182,11 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# move current workspace to other monitor, according to direction
+bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+Ctrl+Down move workspace to output down
+bindsym $mod+Ctrl+Right move workspace to output right
+bindsym $mod+Ctrl+Left move workspace to output left
 
 # how to find the class
 # run xprop
@@ -191,11 +194,11 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # get the second parameter of WM_CLASS(STRING) = "Navigator", "Firefox"
 
 assign [class="TelegramDesktop"] $ws10
+
 assign [class="Skype"] $ws10
 for_window [class="Skype"] floating disable
 
 assign [class="Slack"] $ws10
-
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -235,9 +238,9 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
         tray_output primary
-	font pango: System San Francisco Display, FontAwesome 10
+        font pango: System San Francisco Display, FontAwesome 10
 
-      colors {
+        colors {
               separator $lighter_grey2
               background $grey
               statusline $light_grey
@@ -250,14 +253,14 @@ bar {
 
 }
 
-# Widow Colours
+# Window Colours
 #                           border          background      text            indicator
 client.focused              $grey           $grey           $white          $light_orange
 client.focused_inactive     $lighter_grey1  $lighter_grey1  $lighter_grey2  $light_orange
 client.unfocused            $lighter_grey1  $lighter_grey1  $lighter_grey2  $light_orange
 client.urgent               $lighter_grey1  $light_red      $dark_grey      $light_orange
 
-#bindsym $mod+l exec i3lock -k --blur=1 --veriftext="" --insidevercolor=00000000 --insidewrongcolor=00000000 --insidecolor=00000000 --ringvercolor=00000000 --ringwrongcolor=00000000 --ringcolor=00000000 --linecolor=00000000 --keyhlcolor=000000ff --verifcolor=00000000 --wrongcolor=00000000
+# lock
 bindsym $mod+l exec ~/.config/i3/blue_lock.sh
 
 # Pulse Audio controls
@@ -277,7 +280,7 @@ bindsym XF86MonBrightnessDown exec ~/.config/i3/brightness_down.sh
 
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh
 
 # Media player controls
 # install playerctl
@@ -306,12 +309,10 @@ exec --no-startup-id compton
 exec --no-startup-id dropbox start
 
 exec --no-startup-id telegram-desktop
-#exec --no-startup-id slack
 
 exec --no-startup-id synology-cloud-station-drive
 
-# exec ~/.screenlayout/both_monitors.sh
-
+# remove beep
 exec --no-startup-id xset b off
 exec --no-startup-id xset b 0 0 0
 
