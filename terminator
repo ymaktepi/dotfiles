@@ -1,5 +1,7 @@
 [global_config]
   borderless = True
+  title_font = Roboto Mono 9
+  title_use_system_font = False
 [keybindings]
 [layouts]
   [[default]]
