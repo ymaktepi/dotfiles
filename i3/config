@@ -41,6 +41,8 @@ set $argb_light_orange argb:EEfcc09e
 # change settings in ~/.config/gtk-3.0/settings.ini (San Fransisco Display 10)
 font pango:System San Francisco 10
 
+for_window [class="^.*"] border pixel 2
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
