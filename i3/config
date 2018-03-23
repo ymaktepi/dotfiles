@@ -42,6 +42,7 @@ set $argb_light_orange argb:EEfcc09e
 font pango:System San Francisco 10
 
 for_window [class="^.*"] border pixel 2
+hide_edge_borders both
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
