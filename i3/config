@@ -42,7 +42,7 @@ set $argb_light_orange argb:EEfcc09e
 font pango:System San Francisco 10
 
 for_window [class="^.*"] border pixel 2
-hide_edge_borders both
+hide_edge_borders smart
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -65,21 +65,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 bindsym $alt+F4 kill
 
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
+# start rofi (a program launcher)
 set $nope argb:00000000
-# rofi pre 1.4
-# bindsym $mod+d exec rofi -show run -separator-style none \
-#     -hide-scrollbar -lines 3 -eh 2 -bw 0 \
-#     -font "System San Francisco Display 18" \
-#     -bc "$nope" \
-#     -width 50 \
-#     -height 50 \
-#     -bg "$argb_lighter_grey1" -bg-active "$nope" -bg-urgent "$nope" \
-#     -fg "$light_grey" \
-#     -hlfg "$argb_light_grey" -hlfg-active "$argb_light_grey" -hlfg-urgent "$argb_light_grey" \
-#     -padding 10 \
-#     -bg-active "$nope"
 
 bindsym $mod+d exec "rofi -show run -separator-style none \
     -hide-scrollbar -lines 3 -eh 2 -bw 0 \
@@ -88,13 +75,6 @@ bindsym $mod+d exec "rofi -show run -separator-style none \
     -color-window \\"$argb_light_grey,$argb_light_grey,$argb_light_grey\\" \
     -padding 10"
 
-
-# rofi post
-
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -241,7 +221,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
         tray_output primary
         font pango: System San Francisco Display, FontAwesome 10
 
@@ -260,17 +240,17 @@ bar {
 
 # Window Colours
 #                           border          background      text            indicator
-client.focused              $grey           $grey           $white          $light_orange
-client.focused_inactive     $lighter_grey1  $lighter_grey1  $lighter_grey2  $light_orange
-client.unfocused            $lighter_grey1  $lighter_grey1  $lighter_grey2  $light_orange
-client.urgent               $lighter_grey1  $light_red      $dark_grey      $light_orange
+client.focused              $light_orange   $light_orange   $white          $light_red
+client.focused_inactive     $lighter_grey1  $lighter_grey1  $lighter_grey2  $light_red
+client.unfocused            $lighter_grey1  $lighter_grey1  $lighter_grey2  $light_red
+client.urgent               $lighter_grey1  $light_red      $dark_grey      $light_red
 
 # lock
-bindsym Ctrl+$alt+l exec ~/.config/i3/blue_lock.sh
+bindsym Ctrl+$alt+l exec ~/.scripts/lock.sh
 
 # Pulse Audio controls
 # change sink id (see pactl list sinks)
-set $sinkid alsa_output.pci-0000_00_1b.0.analog-stereo
+set $sinkid alsa_output.pci-0000_00_1f.3.analog-stereo
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sinkid +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sinkid -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sinkid toggle # mute sound
@@ -280,12 +260,12 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sinkid toggle # 
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 #if it doesn't work, then use this:
-bindsym XF86MonBrightnessUp exec ~/.config/i3/brightness_up.sh
-bindsym XF86MonBrightnessDown exec ~/.config/i3/brightness_down.sh
+bindsym XF86MonBrightnessUp exec ~/.scripts/brightness_up.sh
+bindsym XF86MonBrightnessDown exec ~/.scripts/brightness_down.sh
 
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh
+#bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh
 
 # Media player controls
 # install playerctl
@@ -307,7 +287,7 @@ bindsym --release Ctrl+Shift+Print exec scrot -u '/tmp/screenshot_%Y%m%d_%H%M%S.
 # install feh
 exec_always feh --bg-scale ~/Pictures/wallpaper.png
 
-exec --no-startup-id xautolock -time 5 -locker '~/.config/i3/blue_lock.sh'
+exec --no-startup-id xautolock -time 5 -locker '~/.scripts/blue_lock.sh'
 
 exec --no-startup-id compton
 
