@@ -12,6 +12,8 @@
 # The color will gradually change for a percentage below 85%, and the urgency
 # (exit code 33) is set if there is less that 5% remaining.
 
+# this is in /usr/lib/i3blocks
+
 use strict;
 use warnings;
 use utf8;
