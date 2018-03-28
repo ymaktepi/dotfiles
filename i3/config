@@ -180,6 +180,8 @@ bindsym $mod+Ctrl+Left move workspace to output left
 
 assign [class="TelegramDesktop"] $ws10
 
+assign [class="Signal"] $ws10
+
 assign [class="Skype"] $ws10
 for_window [class="Skype"] floating disable
 
@@ -287,13 +289,15 @@ bindsym --release Ctrl+Shift+Print exec scrot -u '/tmp/screenshot_%Y%m%d_%H%M%S.
 # install feh
 exec_always feh --bg-scale ~/Pictures/wallpaper.png
 
-exec --no-startup-id xautolock -time 5 -locker '~/.scripts/blue_lock.sh'
+exec --no-startup-id xautolock -time 5 -locker '~/.scripts/lock.sh'
 
 exec --no-startup-id compton
 
 exec --no-startup-id dropbox start
 
 exec --no-startup-id telegram-desktop
+
+exec --no-startup-id signal-desktop
 
 exec --no-startup-id synology-cloud-station-drive
 
