@@ -307,3 +307,6 @@ exec --no-startup-id xset b 0 0 0
 
 # wifi applet
 exec --no-startup-id nm-applet
+
+# dual screen 2k5
+exec --no-startup-id ~/.screenlayout/2_screens.sh
