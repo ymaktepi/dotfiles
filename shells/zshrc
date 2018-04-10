@@ -1,1 +1,4 @@
 alias fuck='sudo `fc -n -l -1`'
+
+# yaourt zsh-autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
