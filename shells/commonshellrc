@@ -5,3 +5,11 @@ function sshadd {
 }
 
 
+alias htop="htop -C"
+
+alias hibernate="systemctl hibernate && ~/.scripts/lock.sh"
+
+function yourt {
+    echo Querying "$1"
+    yaourt --color -Ss "$1" | grep '^\S*[ce]\w*/' -A1
+}
