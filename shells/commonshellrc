@@ -13,3 +13,7 @@ function yourt {
     echo Querying "$1"
     yaourt --color -Ss "$1" | grep '^\S*[ce]\w*/' -A1
 }
+
+# see https://docs.npmjs.com/getting-started/fixing-npm-permissions
+# mkdir ~/.npm-global && npm config set prefix '~/.npm-global'
+export PATH=~/.npm-global/bin:$PATH
