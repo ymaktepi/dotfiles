@@ -242,7 +242,7 @@ bar {
 
 # Window Colours
 #                           border          background      text            indicator
-client.focused              $light_orange   $light_orange   $white          $light_red
+client.focused              $light_orange   $light_orange   $grey           $light_red
 client.focused_inactive     $lighter_grey1  $lighter_grey1  $lighter_grey2  $light_red
 client.unfocused            $lighter_grey1  $lighter_grey1  $lighter_grey2  $light_red
 client.urgent               $lighter_grey1  $light_red      $dark_grey      $light_red
