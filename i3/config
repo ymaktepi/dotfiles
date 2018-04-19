@@ -39,7 +39,7 @@ set $argb_light_orange argb:EEfcc09e
 # change a setting in default font, save and apply (so it creates the following config files)
 # change settings in ~/.gtkrc-2.0 (San Francisco Display 10
 # change settings in ~/.config/gtk-3.0/settings.ini (San Fransisco Display 10)
-font pango:System San Francisco 10
+font pango:Roboto 10
 
 for_window [class="^.*"] border pixel 2
 hide_edge_borders smart
@@ -140,8 +140,8 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10 "
+set $ws9 ""
+set $ws10 ""
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -186,6 +186,8 @@ assign [class="Skype"] $ws10
 for_window [class="Skype"] floating disable
 
 assign [class="Slack"] $ws10
+
+for_window [class="Spotify"] move to workspace $ws9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -271,10 +273,10 @@ bindsym XF86MonBrightnessDown exec ~/.scripts/brightness_down.sh
 
 # Media player controls
 # install playerctl
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl -p spotify play-pause
+bindsym XF86AudioPause exec playerctl -p spotify play-pause
+bindsym XF86AudioNext exec playerctl -p spotify next
+bindsym XF86AudioPrev exec playerctl -p spotify previous
 
 # Multi-screen screenshots with scrot
 bindsym --release Print exec scrot '/tmp/screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots/ && mv $f ~/Pictures/screenshots/ && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots/ | head -1`' # All screens
@@ -313,3 +315,5 @@ exec --no-startup-id ~/.screenlayout/2_screens.sh
 
 # suspend-to-ram power saving
 exec --no-startup-id sysctl acpi.ec_no_wakeup=1
+
+exec --no-startup-id spotify

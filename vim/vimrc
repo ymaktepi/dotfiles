@@ -64,7 +64,8 @@ let mapleader = ","
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
-
+" allow mouse
+set mouse=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

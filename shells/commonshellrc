@@ -7,13 +7,24 @@ function sshadd {
 
 alias htop="htop -C"
 
-alias hibernate="systemctl hibernate && ~/.scripts/lock.sh"
+alias hibernate="systemctl hibernate"
 
 function yourt {
-    echo Querying "$1"
     yaourt --color -Ss "$1" | grep '^\S*[ce]\w*/' -A1
+}
+
+function urman {
+    aurman -Ss "$1" | grep '^\S*[ce]\w*/' -A1
 }
 
 # see https://docs.npmjs.com/getting-started/fixing-npm-permissions
 # mkdir ~/.npm-global && npm config set prefix '~/.npm-global'
 export PATH=~/.npm-global/bin:$PATH
+
+function rage {
+    if [ "$#" -eq 0 ] ; then
+        rage ..l..
+    else
+        figlet "$@"| lolcat
+    fi
+}
