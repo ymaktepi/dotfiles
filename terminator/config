@@ -20,7 +20,9 @@
     font = Roboto Mono 10
     foreground_color = "#d1d4e0"
     icon_bell = False
-    palette = "#d1d4e0:#ffffff:#859900:#b58900:#268bd2:#fcc09e:#888a85:#eee8d5:#002b36:#ee829f:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    # palette = "#d1d4e0:#ffffff:#859900:#b58900:#268bd2:#fcc09e:#888a85:#eee8d5:#002b36:#ee829f:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    #palette = "#282a2e:#ee829f:#8c9440:#fcc09e:#5f819d:#85678f:#5e8d87:#707880:#373b41:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#c5c8c6"
+    palette = "#252936:#cc6666:#8c9440:#f0c674:#5f819d:#85678f:#5e8d87:#707880:#7780a1:#ee829f:#b5bd68:#fcc09e:#81a2be:#b294bb:#8abeb7:#c5c8c6"
     scrollback_infinite = True
     scrollbar_position = hidden
     show_titlebar = False
