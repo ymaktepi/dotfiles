@@ -5,3 +5,5 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source ~/.oh-my-zsh/custom/zsh_autosuggestion.zsh
 
+#unalias htop
+alias htop="htop --tree"

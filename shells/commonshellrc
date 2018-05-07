@@ -5,7 +5,7 @@ function sshadd {
 }
 
 
-alias htop="htop -C"
+#alias htop="htop --tree"
 
 alias hibernate="systemctl hibernate"
 
@@ -28,3 +28,5 @@ function rage {
         figlet "$@"| lolcat
     fi
 }
+
+alias connect_vpn_hearc="echo 'Enter you password:' && openconnect -u nicolas.huguenin --passwd-on-stdin vpnclust2.he-arc.ch"

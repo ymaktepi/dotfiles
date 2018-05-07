@@ -251,6 +251,7 @@ client.urgent               $lighter_grey1  $light_red      $dark_grey      $lig
 
 # lock
 bindsym Ctrl+$alt+l exec ~/.scripts/lock.sh
+bindsym Ctrl+$alt+k exec scrot /tmp/screen_locked.png && i3lock -i /tmp/screen_locked.png -u
 
 # Pulse Audio controls
 # change sink id (see pactl list sinks)

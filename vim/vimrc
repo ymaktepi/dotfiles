@@ -396,4 +396,4 @@ endfunction
 "    let @/ = l:pattern
 "    let @" = l:saved_reg
 "endfunction
-
+"
