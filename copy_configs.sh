@@ -16,3 +16,6 @@ ln -s $(pwd)/shells ~/.shells
 ln -s $(pwd)/scripts ~/.scripts
 
 ln -s $(pwd)/xresources/Xresources ~/.Xresources
+
+yaourt -S aurman
+
