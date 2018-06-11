@@ -3,10 +3,14 @@
 aurman -S i3
 aurman -S i3lock-color-git
 aurman -S lightdm-slick-greeter lightdm-mini-greeter
-sudo ln -s $(pwd)/greeter/slick-greeter.conf /etc/lightdm/slick-greeter.conf
-sudo ln -s $(pwd)/greeter/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
-sudo sed -i s/lightdm-webkit2-greeter/lightdm-mini-greeter/
-sudo sed -i s/user-session=gnome/user-session=i3/
+sudo mv /etc/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf.bak
+# dont ln because boot stuff
+sudo cp $(pwd)/greeter/slick-greeter.conf /etc/lightdm/slick-greeter.conf
+sudo mv /etc/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf.bak
+# dont ln because boot stuff
+sudo cp $(pwd)/greeter/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
+sudo sed -i s/lightdm-webkit2-greeter/lightdm-mini-greeter/ /etc/lightdm/lightdm.conf
+sudo sed -i s/user-session=gnome/user-session=i3/ /etc/lightdm/lightdm.conf
 
 aurman -S zsh
 aurman -S zsh-autosuggestions
