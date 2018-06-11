@@ -25,8 +25,8 @@ function rage {
     if [ "$#" -eq 0 ] ; then
         rage ..l..
     else
-        figlet "$@"| lolcat
+        figlet "..l.. $@"| lolcat
     fi
 }
 
-alias connect_vpn_hearc="echo 'Enter you password:' && openconnect -u nicolas.huguenin --passwd-on-stdin vpnclust2.he-arc.ch"
+alias de="cd"

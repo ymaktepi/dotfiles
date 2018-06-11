@@ -50,6 +50,8 @@ set history=500
 filetype plugin on
 filetype indent on
 
+set nowrap
+
 " Set to auto read when a file is changed from the outside
 set autoread
 
@@ -202,7 +204,7 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
+"set wrap "Wrap lines
 
 
 """"""""""""""""""""""""""""""
@@ -397,3 +399,6 @@ endfunction
 "    let @" = l:saved_reg
 "endfunction
 "
+
+" youcompleteme option
+let g:ycm_server_python_interpreter="python2"
