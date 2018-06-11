@@ -16,3 +16,5 @@ ln -s $(pwd)/shells ~/.shells
 ln -s $(pwd)/scripts ~/.scripts
 
 ln -s $(pwd)/xresources/Xresources ~/.Xresources
+
+aurman -S noto-fonts-cjk noto-fonts-emoji noto-fonts
