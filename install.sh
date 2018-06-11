@@ -2,6 +2,11 @@
 
 aurman -S i3
 aurman -S i3lock-color-git
+aurman -S lightdm-slick-greeter lightdm-mini-greeter
+sudo ln -s $(pwd)/greeter/slick-greeter.conf /etc/lightdm/slick-greeter.conf
+sudo ln -s $(pwd)/greeter/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
+sudo sed -i s/lightdm-webkit2-greeter/lightdm-mini-greeter/
+sudo sed -i s/user-session=gnome/user-session=i3/
 
 aurman -S zsh
 aurman -S zsh-autosuggestions
@@ -26,11 +31,9 @@ aurman -S playerctl
 
 aurman -S terminator
 
-aurman -S vim
+aurman -S vim vim-youcompleteme-git
 
-aurman -S ttf-font-awesome-4
-aurman -S ttf-roboto
-aurman -S ttf-roboto-mono
+aurman -S ttf-font-awesome-4 ttf-roboto ttf-roboto-mono
 
 aurman -S arandr
 
