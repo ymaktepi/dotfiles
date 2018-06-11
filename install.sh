@@ -3,8 +3,12 @@
 aurman -S i3
 aurman -S i3lock-color-git
 
-aurman -S oh-my-zsh-git
+aurman -S zsh
 aurman -S zsh-autosuggestions
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+rm ~/.oh-my-zsh/custom -rf
+ln -s $(pwd)/oh-my-zsh/custom ~/.oh-my-zsh/custom
+sed -i s/robbyrussell/simple_custom/ ~/.zshrc
 
 aurman -S feh
 
@@ -27,6 +31,8 @@ aurman -S vim
 aurman -S ttf-font-awesome-4
 aurman -S ttf-roboto
 aurman -S ttf-roboto-mono
+
+aurman -S arandr
 
 echo "
 
