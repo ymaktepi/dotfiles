@@ -180,6 +180,8 @@ bindsym $mod+Ctrl+Left move workspace to output left
 
 assign [class="TelegramDesktop"] $ws10
 
+assign [class="whats-app-nativefier-7bbd2c"] $ws10
+
 assign [class="Signal"] $ws10
 
 assign [class="Skype"] $ws10
@@ -299,6 +301,8 @@ exec --no-startup-id compton
 exec --no-startup-id dropbox start
 
 exec --no-startup-id telegram-desktop
+
+exec --no-startup-id whatsapp-web-desktop
 
 exec --no-startup-id signal-desktop
 
