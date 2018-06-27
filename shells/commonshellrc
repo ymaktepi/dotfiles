@@ -24,3 +24,5 @@ function rage {
 }
 
 alias de="cd"
+alias bcc="bitcoin-cli"
+alias bcd="bitcoind"
