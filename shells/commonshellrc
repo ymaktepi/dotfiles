@@ -9,13 +9,7 @@ function sshadd {
 
 alias hibernate="systemctl hibernate"
 
-function yourt {
-    yaourt --color -Ss "$1" | grep '^\S*[ce]\w*/' -A1
-}
-
-function urman {
-    aurman -Ss "$1" | grep '^\S*[ce]\w*/' -A1
-}
+alias urman="aurman --repo"
 
 # see https://docs.npmjs.com/getting-started/fixing-npm-permissions
 # mkdir ~/.npm-global && npm config set prefix '~/.npm-global'
@@ -30,3 +24,5 @@ function rage {
 }
 
 alias de="cd"
+alias bcc="bitcoin-cli"
+alias bcd="bitcoind"
