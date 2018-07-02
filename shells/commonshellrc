@@ -4,7 +4,6 @@ function sshadd {
     ssh-add
 }
 
-
 #alias htop="htop --tree"
 
 alias hibernate="systemctl hibernate"
@@ -24,5 +23,5 @@ function rage {
 }
 
 alias de="cd"
-alias bcc="bitcoin-cli"
-alias bcd="bitcoind"
+
+source ~/.shells/customrc
