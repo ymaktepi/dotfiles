@@ -1,0 +1,6 @@
+# copy this file as customrc
+# create commands that are only useful for the local machine
+
+function useful_local {
+    echo "This is only useful locally."
+}

@@ -4,7 +4,6 @@ function sshadd {
     ssh-add
 }
 
-
 #alias htop="htop --tree"
 
 alias hibernate="systemctl hibernate"
@@ -25,8 +24,12 @@ function rage {
 
 alias de="cd"
 
+<<<<<<< HEAD
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
 alias bcc="bitcoin-cli"
 alias bcd="bitcoind"
+=======
+source ~/.shells/customrc
+>>>>>>> 3309adb87f71f7e7b3cfca95ffc88374d0cea75f

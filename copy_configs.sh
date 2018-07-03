@@ -18,6 +18,7 @@ ln -s $(pwd)/pictures/wallpaper.png ~/Pictures/wallpaper.png
 ln -s $(pwd)/pylint/pylintrc ~/.pylintrc
 
 ln -s $(pwd)/shells ~/.shells
+cp -n ~/.shells/customrc.example ~/.shells/customrc
 ln -s $(pwd)/scripts ~/.scripts
 
 ln -s $(pwd)/xresources/Xresources ~/.Xresources
