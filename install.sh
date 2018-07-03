@@ -36,7 +36,6 @@ aurman -S playerctl
 aurman -S terminator
 
 aurman -S vim vim-youcompleteme-git
-
 git config --global core.editor "vim"
 
 aurman -S otf-font-awesome ttf-roboto ttf-roboto-mono
