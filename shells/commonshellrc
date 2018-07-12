@@ -24,4 +24,7 @@ function rage {
 
 alias de="cd"
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 source ~/.shells/customrc

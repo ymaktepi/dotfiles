@@ -321,6 +321,6 @@ exec --no-startup-id ~/.screenlayout/2_screens.sh
 # suspend-to-ram power saving
 exec --no-startup-id sysctl acpi.ec_no_wakeup=1
 
-exec --no-startup-id numlockx
+exec --no-startup-id numlockx 
 
 exec --no-startup-id spotify
