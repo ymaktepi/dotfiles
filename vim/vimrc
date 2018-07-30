@@ -402,3 +402,13 @@ endfunction
 
 " youcompleteme option
 let g:ycm_server_python_interpreter="python2"
+
+" nerdree at start
+autocmd vimenter * NERDTree
+
+" toggle nerdtree with ctrl-n
+map <C-n> :NERDTreeToggle<CR>
+
+" remove trainling whithespace on save
+"autocmd BufWritePre * %s/\s\+$//e
+
