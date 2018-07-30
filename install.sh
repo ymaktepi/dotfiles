@@ -35,6 +35,8 @@ aurman -S playerctl
 
 aurman -S terminator
 
+aurman -S xclip
+
 aurman -S vim vim-youcompleteme-git
 git config --global core.editor "vim"
 
