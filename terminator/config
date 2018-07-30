@@ -3,6 +3,8 @@
   title_font = Roboto Mono 9
   title_use_system_font = False
 [keybindings]
+  page_down_half = <Shift>Page_Down
+  page_up_half = <Shift>Page_Up
 [layouts]
   [[default]]
     [[[child1]]]
