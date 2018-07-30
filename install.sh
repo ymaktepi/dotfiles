@@ -37,7 +37,7 @@ aurman -S terminator
 
 aurman -S ranger w3m
 
-aurman -S vim vim-youcompleteme-git
+aurman -S vim vim-youcompleteme-git vim-ctrlp vim-nerdtree
 git config --global core.editor "vim"
 
 aurman -S otf-font-awesome ttf-roboto ttf-roboto-mono
