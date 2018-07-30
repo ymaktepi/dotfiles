@@ -29,7 +29,7 @@ aurman -S xautolock
 
 aurman -S compton
 
-aurman -S xbackligh
+aurman -S xbacklight
 
 aurman -S playerctl
 
