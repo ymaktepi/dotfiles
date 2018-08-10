@@ -412,3 +412,4 @@ map <C-n> :NERDTreeToggle<CR>
 " remove trainling whithespace on save
 "autocmd BufWritePre * %s/\s\+$//e
 
+set clipboard=unnamedplus
