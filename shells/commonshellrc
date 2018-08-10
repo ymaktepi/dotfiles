@@ -4,8 +4,6 @@ function sshadd {
     ssh-add
 }
 
-#alias htop="htop --tree"
-
 alias hibernate="systemctl hibernate"
 
 alias urman="aurman --repo"
@@ -16,13 +14,14 @@ export PATH=~/.npm-global/bin:$PATH
 
 function rage {
     if [ "$#" -eq 0 ] ; then
-        rage ..l..
+        rage ..l.. 
     else
         figlet "..l.. $@"| lolcat
     fi
 }
 
 alias de="cd"
+alias cpdir="cp -r"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
