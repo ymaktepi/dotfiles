@@ -39,6 +39,7 @@ aurman -S xclip
 
 aurman -S ranger w3m
 
+# gvim's vim has clipboard support, which vim package has not
 aurman -S gvim vim-youcompleteme-git vim-ctrlp vim-nerdtree
 
 git config --global core.editor "vim"
