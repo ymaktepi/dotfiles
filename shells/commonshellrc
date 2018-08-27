@@ -1,7 +1,16 @@
-function sshadd {
+function sshadd 
+{
     eval "$(ssh-agent -s)"
     #ssh-add ~/.ssh/id_rsa
     ssh-add
+}
+
+function swap
+{
+    local TMPFILE=tmp.$$
+    mv "$1" $TMPFILE
+    mv "$2" "$1"
+    mv $TMPFILE "$2"
 }
 
 alias hibernate="systemctl hibernate"
