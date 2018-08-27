@@ -28,5 +28,5 @@ ln -s $(pwd)/scripts ~/.scripts
 
 ln -s $(pwd)/xresources/Xresources ~/.Xresources
 
-sudo pacman -S aurman
-aurman -S noto-fonts-cjk noto-fonts-emoji noto-fonts
+sudo pacman -S yay
+yay -S noto-fonts-cjk noto-fonts-emoji noto-fonts
