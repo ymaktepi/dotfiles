@@ -1,8 +1,8 @@
 #!/bin/bash
 
-aurman -S i3
-aurman -S i3lock-color-git
-aurman -S lightdm-slick-greeter lightdm-mini-greeter
+yay -S i3
+yay -S i3lock-color-git
+yay -S lightdm-slick-greeter lightdm-mini-greeter
 sudo mv /etc/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf.bak
 # dont ln because boot stuff
 sudo cp $(pwd)/greeter/slick-greeter.conf /etc/lightdm/slick-greeter.conf
@@ -12,40 +12,46 @@ sudo cp $(pwd)/greeter/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greet
 sudo sed -i s/lightdm-webkit2-greeter/lightdm-mini-greeter/ /etc/lightdm/lightdm.conf
 sudo sed -i s/user-session=gnome/user-session=i3/ /etc/lightdm/lightdm.conf
 
-aurman -S zsh
-aurman -S zsh-autosuggestions
+yay -S zsh
+yay -S zsh-autosuggestions
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 rm ~/.oh-my-zsh/custom -rf
 ln -s $(pwd)/oh-my-zsh/custom ~/.oh-my-zsh/custom
 sed -i s/robbyrussell/simple_custom/ ~/.zshrc
 
-aurman -S feh
+yay -S feh
 
-aurman -S scrot
+yay -S scrot
 
-aurman -S rofi-git
+yay -S rofi-git
 
-aurman -S xautolock
+yay -S xautolock
 
-aurman -S compton
+yay -S compton
 
-aurman -S xbacklight
+yay -S xbacklight
 
-aurman -S playerctl
+yay -S playerctl
 
-aurman -S terminator
+# terminal emulators
+yay -S terminator
+yay -S rxvt-unicode urxvt-font-size-git
 
-aurman -S xclip
+yay -S xclip
 
-aurman -S ranger w3m
+yay -S ranger w3m
 
-aurman -S gvim vim-youcompleteme-git vim-ctrlp vim-nerdtree
+# gvim's vim has clipboard support, which vim package has not
+yay -S gvim vim-youcompleteme-git vim-ctrlp vim-nerdtree
 
 git config --global core.editor "vim"
 
-aurman -S otf-font-awesome ttf-roboto ttf-roboto-mono
+# diverse fonts
+yay -S otf-font-awesome ttf-roboto ttf-roboto-mono
+yay -S ttf-symbola adobe-source-code-pro-fonts
+yay -S noto-fonts-cjk noto-fonts-emoji noto-fonts
 
-aurman -S arandr
+yay -S arandr
 
 echo "
 
