@@ -33,17 +33,23 @@ yay -S xbacklight
 
 yay -S playerctl
 
+# terminal emulators
 yay -S terminator
+yay -S rxvt-unicode urxvt-font-size-git
 
 yay -S xclip
 
 yay -S ranger w3m
 
+# gvim's vim has clipboard support, which vim package has not
 yay -S gvim vim-youcompleteme-git vim-ctrlp vim-nerdtree
 
 git config --global core.editor "vim"
 
+# diverse fonts
 yay -S otf-font-awesome ttf-roboto ttf-roboto-mono
+yay -S ttf-symbola adobe-source-code-pro-fonts
+yay -S noto-fonts-cjk noto-fonts-emoji noto-fonts
 
 yay -S arandr
 

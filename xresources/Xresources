@@ -1,1 +1,125 @@
 Xcursor.size: 22
+
+! special
+*.foreground:   #d1d4e0
+*.background:   #1f222d
+*.cursorColor:  #aaaaaa
+
+! black
+*.color0:       #252936
+*.color8:       #7780a1
+
+! red
+*.color1:       #cc6666
+*.color9:       #ee829f
+
+! green
+*.color2:       #8c9440
+*.color10:      #b5bd68
+
+! yellow
+*.color3:       #f0c674
+*.color11:      #fcc09e
+
+! blue
+*.color4:       #5f819d
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #85678f
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #5e8d87
+*.color14:      #8abeb7
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
+
+!------------------------------------
+! urxvt 
+!-----------------------------------
+
+! Larger history limit
+URxvt.saveLines: 1000000
+
+! Disable scrollbar
+URxvt.scrollBar: false
+
+! Copy paste selection key bindings
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! Zoom in/out. Require: https://github.com/majutsushi/urxvt-font-size
+! URxvt.keysym.C-Up:     font-size:increase
+! URxvt.keysym.C-Down:   font-size:decrease
+! URxvt.keysym.C-equal:  font-size:reset
+! URxvt.keysym.C-slash: font-size:show
+
+
+! fonts spec, requires roboto mono and Noto Emoji for stuff (should be in install script)
+! URxvt.font: xft:Roboto\ Mono:size=12:antialias=false,xft:Noto Emoji:size=12,xft:Roboto\Mono\ Powerline
+!URxvt.font: xft:Roboto\ Mono\ for\ Powerline:size=12
+! URxvt.boldFont: xft:Roboto\ Mono:bold:size=12:antialias=false,xft:Noto Emoji:size=12
+
+! Disable printing the terminal contents when pressing PrintScreen.
+URxvt.print-pipe: "cat > /dev/null"
+
+! Clickable URLs
+URxvt.perl-ext-common: default,matcher,font-size,keyboard-select
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+! Disable urxvt ISO14755 mode yellow box on ctrl+shift
+URxvt.iso14755: false
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+URxvt.cursorBlink: true
+
+URxvt.letterSpace: -1
+URxvt.lineSpace: 1
+
+URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
+URxvt*boldFont: xft:Source\ Code\ Pro\ SemiBold:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ SemiBold:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
+
+! fix ctrl-arrow moving in text
+URxvt.keysym.Control-Up:     \033[1;5A
+URxvt.keysym.Control-Down:   \033[1;5B
+URxvt.keysym.Control-Left:   \033[1;5D
+URxvt.keysym.Control-Right:  \033[1;5C
+
+!------------------------------------
+! rofi
+!------------------------------------
+
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+rofi.lines: 3
+rofi.eh: 2
+rofi.bw: 0
+rofi.font: Source\ Code\ Pro\ 18
+rofi.padding: 10
+
+i3wm.rofi_color_dark: argb:EE101218
+i3wm.rofi_color_light: argb:EEd1d4e0
+
+!------------------------------------
+! i3
+!------------------------------------
+
+i3wm.urgent: #ee829f
+i3wm.focused: #fcc09e
+i3wm.text_focused: #ffffff
+i3wm.background_inactive: #252936 
+i3wm.foreground_inactive: #7780a1
+i3wm.text_urgent: #101218
+i3wm.status_line: #d1d4e0

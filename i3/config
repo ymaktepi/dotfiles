@@ -12,25 +12,18 @@
 set $mod Mod4
 set $alt Mod1
 
+set_from_resource $text_urgent i3wm.text_urgent #101218
+set_from_resource $background_color i3wm.background #1f222d
+set_from_resource $background_inactive i3wm.background_inactive #252936
 
-set $dark_grey #101218
-set $grey #1f222d
-set $lighter_grey1 #252936
-set $lighter_grey2 #7780a1
-set $light_grey #d1d4e0
-set $white #ffffff
-set $light_red #ee829f
-set $light_orange #fcc09e
+set_from_resource $foreground_inactive i3wm.foreground_inactive #7780a1
+set_from_resource $status_line i3wm.status_line #d1d4e0
+set_from_resource $text_focused i3wm.text_focused #ffffff
+set_from_resource $urgent i3wm.urgent #ee829f
+set_from_resource $focused i3wm.focused #fcc09e
 
-set $argb_dark_grey argb:EE101218
-set $argb_grey argb:EE1f222d
-set $argb_lighter_grey1 argb:EE252936
-set $argb_lighter_grey2 argb:EE7780a1
-set $argb_light_grey argb:EEd1d4e0
-set $argb_white argb:EEffffff
-set $argb_light_red argb:EEee829f
-set $argb_light_orange argb:EEfcc09e
-
+set_from_resource $rofi_color_dark i3wm.rofi_color_dark argb:EE1f222d
+set_from_resource $rofi_color_light i3wm.rofi_color_light argb:EEd1d4e0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -68,13 +61,9 @@ bindsym $alt+F4 kill
 # start rofi (a program launcher)
 set $nope argb:00000000
 
-bindsym $mod+d exec "rofi -show run -separator-style none \
-    -hide-scrollbar -lines 3 -eh 2 -bw 0 \
-    -font \\"System San Francisco Display 18\\" \
-    -color-normal \\"$nope,$argb_grey,$nope,$light_grey,$grey\\" \
-    -color-window \\"$argb_light_grey,$argb_light_grey,$argb_light_grey\\" \
-    -padding 10"
-
+bindsym $mod+d exec "rofi -show run\
+     -color-normal \\"$nope,$rofi_color_dark,$nope,$status_line,$background_color\\" \
+     -color-window \\"$rofi_color_light,$rofi_color_light,$rofi_color_light\\" "
 
 # change focus
 bindsym $mod+h focus left
@@ -232,24 +221,24 @@ bar {
         font pango: System San Francisco Display, FontAwesome 10
 
         colors {
-              separator $lighter_grey2
-              background $grey
-              statusline $light_grey
-#                                   border      background      text
-              focused_workspace     $grey       $grey           $white
-              active_workspace      $lighter_grey2  $grey  $lighter_grey2
-              inactive_workspace    $grey       $grey           $lighter_grey2
-              urgent_workspace      $grey       $grey           $light_red
+              separator $foreground_inactive
+              background $background_color
+              statusline $status_line
+#                                   border               background         text
+              focused_workspace     $background_color    $background_color  $text_focused
+              active_workspace      $foreground_inactive $background_color  $foreground_inactive
+              inactive_workspace    $background_color    $background_color  $foreground_inactive
+              urgent_workspace      $background_color    $background_color  $urgent
     }
 
 }
 
 # Window Colours
-#                           border          background      text            indicator
-client.focused              $light_orange   $light_orange   $grey           $light_red
-client.focused_inactive     $lighter_grey1  $lighter_grey1  $lighter_grey2  $light_red
-client.unfocused            $lighter_grey1  $lighter_grey1  $lighter_grey2  $light_red
-client.urgent               $lighter_grey1  $light_red      $dark_grey      $light_red
+#                           border                  background              text                    indicator
+client.focused              $focused                $focused                $background_color       $urgent
+client.focused_inactive     $background_inactive    $background_inactive    $foreground_inactive    $urgent
+client.unfocused            $background_inactive    $background_inactive    $foreground_inactive    $urgent
+client.urgent               $background_inactive    $urgent                 $text_urgent            $urgent
 
 # lock
 bindsym Ctrl+$alt+l exec ~/.scripts/lock.sh
