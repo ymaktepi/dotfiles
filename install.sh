@@ -2,10 +2,7 @@
 
 yay -S i3
 yay -S i3lock-color-git
-yay -S lightdm-slick-greeter lightdm-mini-greeter
-sudo mv /etc/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf.bak
-# dont ln because boot stuff
-sudo cp $(pwd)/greeter/slick-greeter.conf /etc/lightdm/slick-greeter.conf
+yay -S lightdm-mini-greeter
 sudo mv /etc/lightdm/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf.bak
 # dont ln because boot stuff
 sudo cp $(pwd)/greeter/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
