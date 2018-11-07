@@ -56,6 +56,7 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 ! URxvt.keysym.C-Down:   font-size:decrease
 ! URxvt.keysym.C-equal:  font-size:reset
 ! URxvt.keysym.C-slash: font-size:show
+URxvt.font-size.step: 10
 
 
 ! fonts spec, requires roboto mono and Noto Emoji for stuff (should be in install script)
