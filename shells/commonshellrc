@@ -29,6 +29,7 @@ function rage {
 
 alias de="cd"
 alias cpdir="cp -r"
+alias v="vim"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"

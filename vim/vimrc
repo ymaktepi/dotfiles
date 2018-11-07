@@ -401,7 +401,7 @@ endfunction
 "
 
 " youcompleteme option
-let g:ycm_server_python_interpreter="python2"
+let g:ycm_server_python_interpreter="python3"
 
 " nerdree at start
 autocmd vimenter * NERDTree
@@ -413,3 +413,9 @@ map <C-n> :NERDTreeToggle<CR>
 "autocmd BufWritePre * %s/\s\+$//e
 
 set clipboard=unnamedplus
+
+"function RemoveTrailingWhitespace ()
+ "   let _s=@/
+  "  %s/\s\+$//e
+   " let @/=_s
+"endfunction
