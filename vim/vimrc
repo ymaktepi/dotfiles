@@ -279,7 +279,14 @@ map <silent> <leader><cr> :noh<cr>
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+set statusline=%t
+set statusline+=%m
+set statusline+=%=
+set statusline+=%c:
+set statusline+=%l/%L
+set statusline+=\ %P
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
