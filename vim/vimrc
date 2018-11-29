@@ -304,6 +304,10 @@ set statusline+=\ %3l:%-2c\         " line + column
 set statusline+=%#Cursor#       " colour
 set statusline+=\ %3p%%\                " percentage
 
+set noshowmode 
+" remove lag from statusline when changing modes
+set timeoutlen=1000 ttimeoutlen=0
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
