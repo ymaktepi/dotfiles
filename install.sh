@@ -39,7 +39,7 @@ yay -S xclip
 yay -S ranger w3m
 
 # gvim's vim has clipboard support, which vim package has not
-yay -S gvim vim-youcompleteme-git vim-ctrlp vim-nerdtree
+yay -S gvim vim-youcompleteme-git vim-ctrlp vim-nerdtree vim-airline vim-airline-themes powerline-fonts
 
 git config --global core.editor "vim"
 
@@ -61,7 +61,6 @@ echo "
 
 You still have to:
 - add gesturefy to firefox
-- change the greeter
 - add dotfile sourcing and config to zsh
 - change stuff in /usr/share/i3blocks
 - add fonts to ~/.gtk-2.0 and ~/.config/gtk-3.0/settings.ini
