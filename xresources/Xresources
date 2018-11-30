@@ -56,7 +56,7 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 ! URxvt.keysym.C-Down:   font-size:decrease
 ! URxvt.keysym.C-equal:  font-size:reset
 ! URxvt.keysym.C-slash: font-size:show
-URxvt.font-size.step: 6
+! URxvt.font-size.step: 6
 
 
 ! fonts spec, requires roboto mono and Noto Emoji for stuff (should be in install script)
@@ -89,7 +89,7 @@ URxvt.cursorBlink: true
 URxvt.letterSpace: -1
 URxvt.lineSpace: 1
 
-URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
+URxvt*font: xft:Source\ Code\ Pro\ Medium\ for\ Powerline:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
 URxvt*boldFont: xft:Source\ Code\ Pro\ SemiBold:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ SemiBold:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
 
 ! fix ctrl-arrow moving in text
