@@ -89,8 +89,8 @@ URxvt.cursorBlink: true
 URxvt.letterSpace: -1
 URxvt.lineSpace: 1
 
-URxvt*font: xft:Source\ Code\ Pro\ Medium\ for\ Powerline:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
-URxvt*boldFont: xft:Source\ Code\ Pro\ SemiBold:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ SemiBold:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
+URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=16:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
+URxvt*boldFont: xft:Source\ Code\ Pro\ SemiBold:pixelsize=16:antialias=true:hinting=true,xft:Source\ Code\ Pro\ SemiBold:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
 
 ! fix ctrl-arrow moving in text
 URxvt.keysym.Control-Up:     \033[1;5A
