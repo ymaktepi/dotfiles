@@ -39,7 +39,7 @@ yay -S xclip
 yay -S ranger w3m
 
 # gvim's vim has clipboard support, which vim package has not
-yay -S gvim vim-youcompleteme-git vim-ctrlp vim-nerdtree vim-airline vim-airline-themes powerline-fonts
+yay -S gvim vim-youcompleteme-git vim-ctrlp vim-nerdtree vim-airline vim-airline-themes powerline-fonts vim-fugitive
 
 git config --global core.editor "vim"
 
