@@ -306,3 +306,6 @@ let g:airline_powerline_fonts = 1
 set fillchars+=vert:\ 
 
 let g:airline#extensions#branch#enable = 1
+
+colorscheme nord
+let g:airline_theme='base16_nord'

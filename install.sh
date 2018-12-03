@@ -40,6 +40,16 @@ yay -S ranger w3m
 
 # gvim's vim has clipboard support, which vim package has not
 yay -S gvim vim-youcompleteme-git vim-ctrlp vim-nerdtree vim-airline vim-airline-themes powerline-fonts vim-fugitive
+VIM_COLORS=~/.vim/colors
+mkdir $VIM_COLORS
+curl https://raw.githubusercontent.com/arcticicestudio/nord-vim/develop/colors/nord.vim --output $VIM_COLORS/nord.vim
+VIM_AIRLINE_PATH="/usr/share/vim/vimfiles/autoload/airline/themes/"
+VIM_NORD_AIRLINE_PATH=$VIM_AIRLINE_PATH/base16_nord.vim
+if [ ! -f $VIM_NORD_AIRLINE_PATH ]
+then
+    # THAT IS BAD YES
+    sudo curl https://raw.githubusercontent.com/vim-airline/vim-airline-themes/master/autoload/airline/themes/base16_nord.vim --output $VIM_NORD_AIRLINE_PATH
+fi
 
 git config --global core.editor "vim"
 
