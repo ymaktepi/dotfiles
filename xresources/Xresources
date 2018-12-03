@@ -1,41 +1,86 @@
 Xcursor.size: 22
 
-! special
-*.foreground:   #d1d4e0
-*.background:   #1f222d
-*.cursorColor:  #aaaaaa
+! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
+
+! Project:    Nord XResources
+! Version:    0.1.0
+! Repository: https://github.com/arcticicestudio/nord-xresources
+! License:    MIT
+
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+!*fading: 35
+!*fadeColor: nord3
 
 ! black
-*.color0:       #252936
-*.color8:       #7780a1
+#define _color0 nord1
+#define _color1 nord11
 
 ! red
-*.color1:       #cc6666
-*.color9:       #ee829f
+#define _color2 nord14
+#define _color3 nord13
 
 ! green
-*.color2:       #8c9440
-*.color10:      #b5bd68
+#define _color4 nord9
+#define _color5 nord15
 
-! yellow
-*.color3:       #f0c674
-*.color11:      #fcc09e
+! yellow_
+#define _color6 nord8
+#define _color7 nord5
 
 ! blue
-*.color4:       #5f819d
-*.color12:      #81a2be
+#define _color8 nord3
+#define _color9 nord11
 
-! magenta
-*.color5:       #85678f
-*.color13:      #b294bb
+! magent_a
+#define _color10 nord14
+#define _color11 nord13
 
 ! cyan
-*.color6:       #5e8d87
-*.color14:      #8abeb7
+#define _color12 nord9
+#define _color13 nord15
 
 ! white
-*.color7:       #707880
-*.color15:      #c5c8c6
+#define _color14 nord7
+#define _color15 nord6
+
+
+*.color0: _color0
+*.color1: _color1
+*.color2: _color2
+*.color3: _color3
+*.color4: _color4
+*.color5: _color5
+*.color6: _color6
+*.color7: _color7
+*.color8: _color8
+*.color9: _color9
+*.color10: _color10
+*.color11: _color11
+*.color12: _color12
+*.color13: _color13
+*.color14: _color14
+*.color15: _color15
+
 
 !------------------------------------
 ! urxvt 
@@ -101,26 +146,38 @@ URxvt.keysym.Control-Right:  \033[1;5C
 !------------------------------------
 ! rofi
 !------------------------------------
+#define _nope argb:00000000
+#define _color0_argb  argb:dd3B4252
 
 rofi.separator-style: none
-rofi.hide-scrollbar: true
-rofi.lines: 3
-rofi.eh: 2
 rofi.bw: 0
-rofi.font: Source\ Code\ Pro\ 18
-rofi.padding: 10
+rofi.font: "Source Code Pro for Powerline" medium 20
+rofi.fullscreen: true
+rofi.color-enabled: true
 
-i3wm.rofi_color_dark: argb:EE101218
-i3wm.rofi_color_light: argb:EEd1d4e0
+! Property Name     BG           Border        Separator
+rofi.color-window: _color0_argb, _color0_argb, _nope
 
+! Property Name     BG       FG     BG-alt Head-BG  Head-FG
+rofi.color-normal:  _nope, _color7, _nope, _nope, _color14
+rofi.color-active:  _nope, _color7, _nope, _nope, _color14
+rofi.color-urgent:  _nope, _color7, _nope, _nope, _color14
+
+rofi.eh: 1
+rofi.hide-scrollbar: true
+rofi.lines: 10
+rofi.width: 100
+rofi.padding: 500
+
+rofi.show-match: false
 !------------------------------------
 ! i3
 !------------------------------------
 
-i3wm.urgent: #ee829f
-i3wm.focused: #fcc09e
-i3wm.text_focused: #ffffff
-i3wm.background_inactive: #252936 
-i3wm.foreground_inactive: #7780a1
-i3wm.text_urgent: #101218
-i3wm.status_line: #d1d4e0
+i3wm.urgent: _color9
+i3wm.focused: _color3 
+i3wm.text_focused: _color15 
+i3wm.background_inactive: _color0
+i3wm.foreground_inactive: _color6
+i3wm.text_urgent: _color0
+i3wm.status_line: nord4 

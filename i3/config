@@ -59,11 +59,8 @@ bindsym $mod+Shift+q kill
 bindsym $alt+F4 kill
 
 # start rofi (a program launcher)
-set $nope argb:00000000
 
-bindsym $mod+d exec "rofi -show run\
-     -color-normal \\"$nope,$rofi_color_dark,$nope,$status_line,$background_color\\" \
-     -color-window \\"$rofi_color_light,$rofi_color_light,$rofi_color_light\\" "
+bindsym $mod+d exec "rofi -show run"
 
 # change focus
 bindsym $mod+h focus left
@@ -311,6 +308,6 @@ exec --no-startup-id ~/.screenlayout/2_screens.sh
 # suspend-to-ram power saving
 exec --no-startup-id sysctl acpi.ec_no_wakeup=1
 
-exec --no-startup-id numlockx 
+exec --no-startup-id numlockx
 
 exec --no-startup-id spotify
