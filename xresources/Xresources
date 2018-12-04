@@ -165,7 +165,7 @@ rofi.color-urgent:  _nope, _color7, _nope, _nope, _color14
 
 rofi.eh: 1
 rofi.hide-scrollbar: true
-rofi.lines: 10
+rofi.lines: 4
 rofi.width: 100
 rofi.padding: 500
 
@@ -176,8 +176,8 @@ rofi.show-match: false
 
 i3wm.urgent: _color9
 i3wm.focused: _color3 
-i3wm.text_focused: _color15 
+i3wm.text_focused: _color6
 i3wm.background_inactive: _color0
-i3wm.foreground_inactive: _color6
+i3wm.foreground_inactive: _color15
 i3wm.text_urgent: _color0
 i3wm.status_line: nord4 
