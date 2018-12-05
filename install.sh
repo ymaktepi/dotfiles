@@ -44,11 +44,12 @@ VIM_COLORS=~/.vim/colors
 mkdir $VIM_COLORS
 curl https://raw.githubusercontent.com/arcticicestudio/nord-vim/develop/colors/nord.vim --output $VIM_COLORS/nord.vim
 VIM_AIRLINE_PATH="/usr/share/vim/vimfiles/autoload/airline/themes/"
-VIM_NORD_AIRLINE_PATH=$VIM_AIRLINE_PATH/base16_nord.vim
+VIM_NORD_AIRLINE_PATH=$VIM_AIRLINE_PATH/nord.vim
 if [ ! -f $VIM_NORD_AIRLINE_PATH ]
 then
     # THAT IS BAD YES
-    sudo curl https://raw.githubusercontent.com/vim-airline/vim-airline-themes/master/autoload/airline/themes/base16_nord.vim --output $VIM_NORD_AIRLINE_PATH
+    sudo curl https://raw.githubusercontent.com/arcticicestudio/nord-vim/develop/autoload/airline/themes/nord.vim --output $VIM_NORD_AIRLINE_PATH
+
 fi
 
 git config --global core.editor "vim"

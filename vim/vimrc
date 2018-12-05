@@ -285,9 +285,11 @@ endfunction
 
 " youcompleteme option
 let g:ycm_server_python_interpreter="python3"
+" run rustup component add rust-src
+let g:ycm_rust_src_pah="/home/ymaktepi/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 
 " nerdree at start
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 
 " toggle nerdtree with ctrl-n
 map <C-n> :NERDTreeToggle<CR>
@@ -316,6 +318,5 @@ let g:nord_underline = 1
 let g:nord_italic_comments = 1
 
 colorscheme nord
-let g:airline_theme='base16_nord'
 
 set cursorline
