@@ -15,8 +15,6 @@ ln -s $(pwd)/terminator ~/.config/terminator
 rm -rf ~/.config/ranger
 ln -s $(pwd)/ranger ~/.config/ranger
 
-rm ~/.nanorc
-ln -s $(pwd)/nano/nanorc ~/.nanorc
 rm ~/.vimrc
 ln -s $(pwd)/vim/vimrc ~/.vimrc
 
