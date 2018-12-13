@@ -1,8 +1,21 @@
-function sshadd 
+function sshadd
 {
+    if [ "$#" -eq 0 ]
+    then
+        FILE="$HOME/.ssh/id_rsa"
+    else
+        FILE="$1"
+    fi
+
+    if [ ! -f $FILE ]
+    then
+        echo "File not found: $FILE"
+        exit
+    fi
+
     eval "$(ssh-agent -s)"
     #ssh-add ~/.ssh/id_rsa
-    ssh-add
+    ssh-add $FILE
 }
 
 function swap
@@ -21,7 +34,7 @@ export PATH=~/.npm-global/bin:$PATH
 
 function rage {
     if [ "$#" -eq 0 ] ; then
-        rage ..l.. 
+        rage ..l..
     else
         figlet "..l.. $@"| lolcat
     fi
