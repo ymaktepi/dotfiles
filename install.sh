@@ -10,7 +10,7 @@ sudo sed -i s/lightdm-webkit2-greeter/lightdm-mini-greeter/ /etc/lightdm/lightdm
 sudo sed -i s/user-session=gnome/user-session=i3/ /etc/lightdm/lightdm.conf
 
 yay -S zsh
-yay -S zsh-autosuggestions
+yay -S zsh-autosuggestions zsh-syntax-highlighting
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 rm ~/.oh-my-zsh/custom -rf
 ln -s $(pwd)/oh-my-zsh/custom ~/.oh-my-zsh/custom

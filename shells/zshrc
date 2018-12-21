@@ -1,7 +1,8 @@
 alias fuck='sudo `fc -n -l -1`'
 
-# aurman zsh-autosuggestions
+# yay zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source ~/.oh-my-zsh/custom/zsh_autosuggestion.zsh
 
