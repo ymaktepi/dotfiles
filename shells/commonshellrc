@@ -40,6 +40,8 @@ function rage {
     fi
 }
 
+alias gl="git log --oneline --decorate --graph"
+
 alias de="cd"
 alias cpdir="cp -r"
 alias v="vim"
