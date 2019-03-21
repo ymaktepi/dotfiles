@@ -40,6 +40,11 @@ function rage {
     fi
 }
 
+function calc {
+    local -r TRUITE="$@"
+    python -c "print($TRUITE)"
+}
+
 alias gl="git log --oneline --decorate --graph"
 
 alias de="cd"
