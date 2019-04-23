@@ -257,7 +257,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sinkid toggle # 
 bindsym XF86MonBrightnessUp exec ~/.scripts/brightness_up.sh
 bindsym XF86MonBrightnessDown exec ~/.scripts/brightness_down.sh
 
-bindsym XF86Display exec ~/.screenlayout/2_screens.sh
+bindsym XF86Display exec ~/.screenlayout/1_screen.sh
 
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh
