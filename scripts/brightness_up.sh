@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-INCREMENT_BRIGHTNESS="50"
+INCREMENT_BRIGHTNESS="100"
 ROOT_BRIGHTNESS="/sys/class/backlight/intel_backlight"
 MAX_BRIGHTNESS=$(cat $ROOT_BRIGHTNESS/max_brightness)
 CURRENT_BRIGHTNESS=$(cat $ROOT_BRIGHTNESS/actual_brightness)
