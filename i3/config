@@ -249,7 +249,7 @@ bindsym Ctrl+$alt+k exec scrot /tmp/screen_locked.png && i3lock -i /tmp/screen_l
 # current sink (the one which has "* index")
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks | awk '/* index:/ { print $3 }') +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks | awk '/* index:/ { print $3 }') -5% #decrease sound volume
-bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   $(pacmd list-sinks | awk '/* index:/ { print $3 }'  toggle # mute sound
+bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   $(pacmd list-sinks | awk '/* index:/ { print $3 }')  toggle # mute sound
 
 # Sreen brightness controls
 # install xbacklight
