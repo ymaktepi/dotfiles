@@ -50,6 +50,7 @@ alias gl="git log --oneline --decorate --graph"
 alias de="cd"
 alias cpdir="cp -r"
 alias v="vim"
+alias spotify="/usr/bin/spotify --force-device-scale-factor=1.2"
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
