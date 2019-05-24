@@ -20,7 +20,7 @@ yay -S feh
 
 yay -S scrot
 
-yay -S rofi-git
+yay -S rofi
 
 yay -S xautolock
 
