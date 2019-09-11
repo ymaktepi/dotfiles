@@ -34,9 +34,9 @@ export PATH=~/.npm-global/bin:$PATH
 
 function rage {
     if [ "$#" -eq 0 ] ; then
-        rage ..l..
+        figlet "..l.." | lolcat
     else
-        figlet "..l.. $@"| lolcat
+        figlet "..l.. $@" | lolcat
     fi
 }
 
