@@ -1,0 +1,7 @@
+set noerrorbells
+
+set relativenumber
+set hlsearch
+set incsearch
+set showmatch
+
