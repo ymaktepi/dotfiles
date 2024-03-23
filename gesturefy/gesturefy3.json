@@ -1,0 +1,285 @@
+{
+  "Blacklist": [],
+  "Exclusions": [
+    "*app.sketchup.com*",
+    "*.tinkercad.com*",
+    "*.tinkercad.com",
+    "tinkercad.com",
+    "app.sketchup.com"
+  ],
+  "Gestures": [
+    {
+      "pattern": [
+        [
+          -227,
+          -1
+        ]
+      ],
+      "command": {
+        "name": "PageBack"
+      }
+    },
+    {
+      "pattern": [
+        [
+          292,
+          -15
+        ]
+      ],
+      "command": {
+        "name": "PageForth"
+      }
+    },
+    {
+      "pattern": [
+        [
+          -297,
+          -28
+        ],
+        [
+          -7,
+          8
+        ],
+        [
+          4,
+          91
+        ],
+        [
+          -19,
+          171
+        ]
+      ],
+      "command": {
+        "name": "ScrollBottom",
+        "settings": {
+          "duration": 100
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          -216,
+          -13
+        ],
+        [
+          -3,
+          -10
+        ],
+        [
+          35,
+          -115
+        ],
+        [
+          0,
+          -15
+        ]
+      ],
+      "command": {
+        "name": "ScrollTop",
+        "settings": {
+          "duration": 100
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          -15,
+          -321
+        ]
+      ],
+      "command": {
+        "name": "OpenLinkInNewTab",
+        "settings": {
+          "position": "default",
+          "focus": false,
+          "emptyTab": false
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          -11,
+          187
+        ]
+      ],
+      "command": {
+        "name": "OpenLinkInNewTab",
+        "settings": {
+          "position": "default",
+          "focus": true,
+          "emptyTab": false
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          10,
+          178
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          187,
+          27
+        ]
+      ],
+      "command": {
+        "name": "CloseTab",
+        "settings": {
+          "nextFocus": "default",
+          "closePinned": false
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          -50,
+          -287
+        ],
+        [
+          8,
+          -7
+        ],
+        [
+          117,
+          34
+        ],
+        [
+          113,
+          -22
+        ]
+      ],
+      "command": {
+        "name": "FocusRightTab",
+        "settings": {
+          "cycling": true,
+          "excludeDiscarded": false
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          -4,
+          -193
+        ],
+        [
+          -19,
+          -61
+        ],
+        [
+          -7,
+          -8
+        ],
+        [
+          -196,
+          45
+        ]
+      ],
+      "command": {
+        "name": "FocusLeftTab",
+        "settings": {
+          "cycling": true,
+          "excludeDiscarded": false
+        }
+      }
+    },
+    {
+      "pattern": [
+        [
+          6,
+          -336
+        ],
+        [
+          8,
+          -154
+        ],
+        [
+          12,
+          -43
+        ],
+        [
+          46,
+          446
+        ]
+      ],
+      "command": {
+        "name": "ReloadTab",
+        "settings": {
+          "cache": false
+        }
+      }
+    }
+  ],
+  "Settings": {
+    "Gesture": {
+      "mouseButton": 2,
+      "suppressionKey": "",
+      "distanceThreshold": 10,
+      "distanceSensitivity": 10,
+      "Timeout": {
+        "active": false,
+        "duration": 1
+      },
+      "Trace": {
+        "display": false,
+        "Style": {
+          "opacity": 0.8,
+          "strokeStyle": "#00AAA0cccc",
+          "lineWidth": 10,
+          "lineGrowth": true
+        }
+      },
+      "Directions": {
+        "display": false,
+        "Style": {
+          "color": "#FFFFFF",
+          "backgroundColor": "#000000",
+          "backgroundOpacity": 0.3,
+          "fontSize": "8vh",
+          "textAlign": "center"
+        }
+      },
+      "Command": {
+        "display": false,
+        "Style": {
+          "backgroundColor": "#0000004d4d",
+          "backgroundOpacity": 0.3,
+          "fontSize": "6vh",
+          "fontColor": "#FFFFFFff"
+        }
+      },
+      "matchingAlgorithm": "strict"
+    },
+    "Rocker": {
+      "active": false,
+      "leftMouseClick": {
+        "name": "PageBack"
+      },
+      "rightMouseClick": {
+        "name": "PageForth"
+      }
+    },
+    "Wheel": {
+      "active": false,
+      "mouseButton": 1,
+      "wheelUp": {
+        "name": "FocusRightTab"
+      },
+      "wheelDown": {
+        "name": "FocusLeftTab"
+      }
+    },
+    "General": {
+      "updateNotification": false,
+      "theme": "light"
+    }
+  }
+}
