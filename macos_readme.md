@@ -1,0 +1,35 @@
+Install
+
+- Install firefox
+- Install iterm2
+    - Install homebrew
+        - It installs git in the background
+- mkdir -p ~/dev/perso && cd ~/dev/perso && git clone https://github.com/ymaktepi/dotfiles.git
+- In term, settings profiles, import profile from dotfiles/iterm/iterm.,json
+- Install 1pass, login
+- Login to firefox
+- Install 1pass in Firefox and stuff, import gesturefy config file
+- Install oh my zsh
+    - Install zshrc from dot files
+    - Install zsh autosuggestions
+- Install vim:
+    -  pathogen
+    - Vimdc
+    - Mkdir .vim/colors mv dotfiles vim/nord.vim .vim/colors/
+    - git config --global core.editor "vim"
+- Install karabiner-elements
+    - Swap modifiers for apple keyboard
+    - In system settings, select natural scrolling for mouse
+    - Select Swiss French keyboard layout
+    - Cp ~/dev/perso/karabiner/*.json ~/config/karabiner/assets/complex-modifications/
+    - Enable those modifications in karabiner
+- Install yabai, skhd, move files from dotfile/yabai to home, 
+    - git config --global core.excludesFile  ~/.gitignore_global
+- Install raycast 
+- Uncheck “when switching to application….”, “automatically rearrange spaces based on most recent use”, check “hide and show dock”
+- Aerospace?
+    - Install aerospace
+    - Install shkd 
+    - Install dot files
+    - Install jankyborders
+
