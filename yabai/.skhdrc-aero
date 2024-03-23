@@ -1,0 +1,94 @@
+# open terminal
+cmd - return : ~/.scripts/iterm.sh
+
+# split order
+cmd - i : aerospace split horizontal
+cmd - u : aerospace split vertical
+
+# focus window
+cmd - h : aerospace focus left
+cmd - j : aerospace focus down
+cmd - k : aerospace focus up
+cmd - l : aerospace focus right
+
+cmd - left : aerospace focus left
+cmd - down : aerospace focus down
+cmd - up : aerospace focus up
+cmd - right : aerospace focus right
+
+# move window
+cmd + shift - h : aerospace move left
+cmd + shift - j : aerospace move down
+cmd + shift - k : aerospace move up
+cmd + shift - l : aerospace move right
+
+cmd + shift - left  : yabai -m window --warp west
+cmd + shift - down  : yabai -m window --warp south
+cmd + shift - up    : yabai -m window --warp north
+cmd + shift - right : yabai -m window --warp east
+
+# fast focus desktop
+cmd - 1 : aerospace workspace 1
+cmd - 2 : aerospace workspace 2
+cmd - 3 : aerospace workspace 3
+cmd - 4 : aerospace workspace 4
+cmd - 5 : aerospace workspace 5
+cmd - 6 : aerospace workspace 6
+cmd - 7 : aerospace workspace 7
+cmd - 8 : aerospace workspace 8
+cmd - 9 : aerospace workspace 9
+cmd - 0 : aerospace workspace 10
+
+shift + cmd - 1 : aerospace move-node-to-workspace  1
+shift + cmd - 2 : aerospace move-node-to-workspace  2
+shift + cmd - 3 : aerospace move-node-to-workspace  3
+shift + cmd - 4 : aerospace move-node-to-workspace  4
+shift + cmd - 5 : aerospace move-node-to-workspace  5
+shift + cmd - 6 : aerospace move-node-to-workspace  6
+shift + cmd - 7 : aerospace move-node-to-workspace  7
+shift + cmd - 8 : aerospace move-node-to-workspace  8
+shift + cmd - 9 : aerospace move-node-to-workspace  9
+shift + cmd - 0 : aerospace move-node-to-workspace 10
+
+# toggle window fullscreen zoom
+cmd + alt - f : aerospace fullscreen
+
+# toggle window native fullscreen
+# shift + alt - f : yabai -m window --toggle native-fullscreen
+
+# toggle window border
+# shift + alt - b : yabai -m window --toggle border
+
+# toggle window split type
+# alt - e : yabai -m window --toggle split
+
+# float / unfloat window and center on screen
+# alt - t : yabai -m window --toggle float;\
+          # yabai -m window --grid 4:4:1:1:2:2
+
+# toggle sticky
+alt - s : yabai -m window --toggle sticky
+
+# toggle sticky, float and resize to picture-in-picture size
+#alt - p : yabai -m window --toggle sticky;\
+#          yabai -m window --grid 5:5:4:0:1:1
+
+# change layout of desktop
+#ctrl + alt - a : yabai -m space --layout bsp
+#ctrl + alt - d : yabai -m space --layout float
+
+#  mode resize redirects all keypresses except the explicit ones
+::resize @
+cmd + alt - r ; resize
+resize < return ; default
+resize < escape ; default
+resize < h : yabai -m window --resize right:-100:0; yabai -m window --resize left:100:0
+resize < j : yabai -m window --resize bottom:0:20; yabai -m window --resize top:0:-20
+resize < k : yabai -m window --resize bottom:0:-20; yabai -m window --resize top:0:20
+resize < l : yabai -m window --resize right:100:0; yabai -m window --resize left:-100:
+resize < left : yabai -m window --resize right:-100:0; yabai -m window --resize left:100:0
+resize < down : yabai -m window --resize bottom:0:20; yabai -m window --resize top:0:-20
+resize < up : yabai -m window --resize bottom:0:-20; yabai -m window --resize top:0:20
+resize < right : yabai -m window --resize right:100:0; yabai -m window --resize left:-100:0
+
+ctrl + alt - l : /System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend
