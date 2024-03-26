@@ -22,10 +22,10 @@ cmd + shift - j : aerospace move down
 cmd + shift - k : aerospace move up
 cmd + shift - l : aerospace move right
 
-cmd + shift - left  : yabai -m window --warp west
-cmd + shift - down  : yabai -m window --warp south
-cmd + shift - up    : yabai -m window --warp north
-cmd + shift - right : yabai -m window --warp east
+cmd + shift - left  : aerospace move left
+cmd + shift - down  : aerospace move down
+cmd + shift - up    : aerospace move up
+cmd + shift - right : aerospace move right
 
 # fast focus desktop
 cmd - 1 : aerospace workspace 1
@@ -53,42 +53,16 @@ shift + cmd - 0 : aerospace move-node-to-workspace 10
 # toggle window fullscreen zoom
 cmd + alt - f : aerospace fullscreen
 
-# toggle window native fullscreen
-# shift + alt - f : yabai -m window --toggle native-fullscreen
-
-# toggle window border
-# shift + alt - b : yabai -m window --toggle border
-
-# toggle window split type
-# alt - e : yabai -m window --toggle split
-
-# float / unfloat window and center on screen
-# alt - t : yabai -m window --toggle float;\
-          # yabai -m window --grid 4:4:1:1:2:2
-
-# toggle sticky
-alt - s : yabai -m window --toggle sticky
-
-# toggle sticky, float and resize to picture-in-picture size
-#alt - p : yabai -m window --toggle sticky;\
-#          yabai -m window --grid 5:5:4:0:1:1
-
-# change layout of desktop
-#ctrl + alt - a : yabai -m space --layout bsp
-#ctrl + alt - d : yabai -m space --layout float
-
 #  mode resize redirects all keypresses except the explicit ones
 ::resize @
 cmd + alt - r ; resize
 resize < return ; default
 resize < escape ; default
-resize < h : yabai -m window --resize right:-100:0; yabai -m window --resize left:100:0
-resize < j : yabai -m window --resize bottom:0:20; yabai -m window --resize top:0:-20
-resize < k : yabai -m window --resize bottom:0:-20; yabai -m window --resize top:0:20
-resize < l : yabai -m window --resize right:100:0; yabai -m window --resize left:-100:
-resize < left : yabai -m window --resize right:-100:0; yabai -m window --resize left:100:0
-resize < down : yabai -m window --resize bottom:0:20; yabai -m window --resize top:0:-20
-resize < up : yabai -m window --resize bottom:0:-20; yabai -m window --resize top:0:20
-resize < right : yabai -m window --resize right:100:0; yabai -m window --resize left:-100:0
-
-ctrl + alt - l : /System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend
+resize < h : aerospace resize width +50
+resize < j : aerospace resize height +50
+resize < k : aerospace resize height -50
+resize < l : aerospace resize width -50
+resize < left : aerospace resize width +50
+resize < down : aerospace resize height +50
+resize < up : aerospace resize height -50
+resize < right : aerospace resize width -50
