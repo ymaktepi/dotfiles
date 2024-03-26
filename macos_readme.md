@@ -1,35 +1,23 @@
-Install
-
-- Install firefox
-- Install iterm2
-    - Install homebrew
+Install for macos
+- Install `Firefox`
+- Install `Iterm2`
+    - Install `homebrew`
         - It installs git in the background
-- mkdir -p ~/dev/perso && cd ~/dev/perso && git clone https://github.com/ymaktepi/dotfiles.git
-- In term, settings profiles, import profile from dotfiles/iterm/iterm.,json
-- Install 1pass, login
-- Login to firefox
-- Install 1pass in Firefox and stuff, import gesturefy config file
-- Install oh my zsh
-    - Install zshrc from dot files
-    - Install zsh autosuggestions
-- Install vim:
-    -  pathogen
-    - Vimdc
-    - Mkdir .vim/colors mv dotfiles vim/nord.vim .vim/colors/
-    - git config --global core.editor "vim"
+- `mkdir -p ~/dev/perso && cd ~/dev/perso && git clone https://github.com/ymaktepi/dotfiles.git`
+    - In iterm, settings profiles, import profile from `dotfiles/iterm/iterm.json`
+- Install 1pass, login into it
+- Login to firefox using 1pass
+- Install 1pass in Firefox and stuff
+- Import gesturefy config file
 - Install karabiner-elements
     - Swap modifiers for apple keyboard
-    - In system settings, select natural scrolling for mouse
+    - Swap `grave_accent_and_tile` with `non_us_backslash`
+    - In system settings, select `natural scrolling for mouse`
     - Select Swiss French keyboard layout
-    - Cp ~/dev/perso/karabiner/*.json ~/config/karabiner/assets/complex-modifications/
-    - Enable those modifications in karabiner
-- Install yabai, skhd, move files from dotfile/yabai to home, 
-    - git config --global core.excludesFile  ~/.gitignore_global
-- Install raycast 
-- Uncheck “when switching to application….”, “automatically rearrange spaces based on most recent use”, check “hide and show dock”
-- Aerospace?
-    - Install aerospace
-    - Install shkd 
-    - Install dot files
-    - Install jankyborders
-
+    - Covered in install script:`cp ~/dev/perso/karabiner/*.json ~/config/karabiner/assets/complex-modifications/`
+        - Enable those modifications in karabiner
+- Install raycast
+- Uncheck “when switching to application….”, “automatically rearrange spaces based on most recent use”, check “hide and
+  show dock”
+- run `install_macos.sh`
+    - run post install stuff described at the end of script

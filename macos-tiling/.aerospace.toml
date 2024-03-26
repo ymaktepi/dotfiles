@@ -39,6 +39,9 @@ run = 'move-node-to-workspace 10'
 [[on-window-detected]]
 if.app-id = "com.tinyspeck.slackmacgap"
 run = 'move-node-to-workspace 10'
+[[on-window-detected]]
+if.app-id = "com.hnc.Discord"
+run = 'move-node-to-workspace 10'
 # TODO: same for teams, slack
 
 [gaps]
