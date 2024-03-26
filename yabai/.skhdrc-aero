@@ -1,3 +1,4 @@
+:: default : borders active_color=0xffe1e3e4
 # open terminal
 cmd - return : ~/.scripts/iterm.sh
 
@@ -54,8 +55,8 @@ shift + cmd - 0 : aerospace move-node-to-workspace 10
 cmd + alt - f : aerospace fullscreen
 
 #  mode resize redirects all keypresses except the explicit ones
-::resize @
-cmd + alt - r ; resize
+::resize @ : borders active_color=0xff00ff00
+cmd + alt - r ; resize 
 resize < return ; default
 resize < escape ; default
 resize < h : aerospace resize width +50
