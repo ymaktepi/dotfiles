@@ -1,0 +1,69 @@
+:: default : borders active_color=0xffe1e3e4
+# open terminal
+cmd - return : ~/.scripts/iterm.sh
+
+# split order
+cmd - i : aerospace split horizontal
+cmd - u : aerospace split vertical
+
+# focus window
+cmd - h : aerospace focus left
+cmd - j : aerospace focus down
+cmd - k : aerospace focus up
+cmd - l : aerospace focus right
+
+cmd - left : aerospace focus left
+cmd - down : aerospace focus down
+cmd - up : aerospace focus up
+cmd - right : aerospace focus right
+
+# move window
+cmd + shift - h : aerospace move left
+cmd + shift - j : aerospace move down
+cmd + shift - k : aerospace move up
+cmd + shift - l : aerospace move right
+
+cmd + shift - left  : aerospace move left
+cmd + shift - down  : aerospace move down
+cmd + shift - up    : aerospace move up
+cmd + shift - right : aerospace move right
+
+# fast focus desktop
+cmd - 1 : aerospace workspace 1
+cmd - 2 : aerospace workspace 2
+cmd - 3 : aerospace workspace 3
+cmd - 4 : aerospace workspace 4
+cmd - 5 : aerospace workspace 5
+cmd - 6 : aerospace workspace 6
+cmd - 7 : aerospace workspace 7
+cmd - 8 : aerospace workspace 8
+cmd - 9 : aerospace workspace 9
+cmd - 0 : aerospace workspace 10
+
+shift + cmd - 1 : aerospace move-node-to-workspace  1
+shift + cmd - 2 : aerospace move-node-to-workspace  2
+shift + cmd - 3 : aerospace move-node-to-workspace  3
+shift + cmd - 4 : aerospace move-node-to-workspace  4
+shift + cmd - 5 : aerospace move-node-to-workspace  5
+shift + cmd - 6 : aerospace move-node-to-workspace  6
+shift + cmd - 7 : aerospace move-node-to-workspace  7
+shift + cmd - 8 : aerospace move-node-to-workspace  8
+shift + cmd - 9 : aerospace move-node-to-workspace  9
+shift + cmd - 0 : aerospace move-node-to-workspace 10
+
+# toggle window fullscreen zoom
+cmd + alt - f : aerospace fullscreen
+
+#  mode resize redirects all keypresses except the explicit ones
+::resize @ : borders active_color=0xff00ff00
+cmd + alt - r ; resize 
+resize < return ; default
+resize < escape ; default
+resize < h : aerospace resize width +50
+resize < j : aerospace resize height +50
+resize < k : aerospace resize height -50
+resize < l : aerospace resize width -50
+resize < left : aerospace resize width +50
+resize < down : aerospace resize height +50
+resize < up : aerospace resize height -50
+resize < right : aerospace resize width -50

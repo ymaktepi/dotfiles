@@ -38,7 +38,7 @@
 "    -> Helper functions
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+execute pathogen#infect()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -276,50 +276,51 @@ endif
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
-endfunction
-
-" youcompleteme option
-let g:ycm_server_python_interpreter="python3"
-" run rustup component add rust-src
-let g:ycm_rust_src_pah="/home/ymaktepi/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
-
-" nerdree at start
-" autocmd vimenter * NERDTree
-
+"function! HasPaste()
+"    if &paste
+"        return 'PASTE MODE  '
+"    endif
+"    return ''
+"endfunction
+"
+"" youcompleteme option
+"let g:ycm_server_python_interpreter="python3"
+"" run rustup component add rust-src
+"let g:ycm_rust_src_pah="/home/ymaktepi/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+"
+"" nerdree at start
+"" autocmd vimenter * NERDTree
+"
 " toggle nerdtree with ctrl-n
 map <C-n> :NERDTreeToggle<CR>
-
-" remove trainling whithespace on save
-"autocmd BufWritePre * %s/\s\+$//e
-
-set clipboard=unnamedplus
-
+"
+"" remove trainling whithespace on save
+""autocmd BufWritePre * %s/\s\+$//e
+"
+"set clipboard=unnamedplus
+"
 "function RemoveTrailingWhitespace ()
  "   let _s=@/
   "  %s/\s\+$//e
    " let @/=_s
 "endfunction
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 " last whitespace is needed
 set fillchars+=vert:\  "asd
 
 let g:airline#extensions#branch#enable = 1
-
+"
 let g:nord_uniform_status_lines = 1
-let g:nord_comment_brightness = 20
+"let g:nord_comment_brightness = 20
 let g:nord_italic = 1
 let g:nord_underline = 1
-let g:nord_italic_comments = 1
-
-colorscheme nord
+"let g:nord_italic_comments = 1
+"
 
 let g:tex_flavor = 'latex'
+
+colorscheme nord
 
 set cursorline
 set relativenumber
