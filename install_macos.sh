@@ -5,10 +5,10 @@ echo "Installing oh my zsh"
 if [ ! -d ~/.oh-my-zsh ]
 then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    mkdir -p ~/.oh-my-zsh/custom/themes
+    cp -r ./oh-my-zsh/custom/themes/* ~/.oh-my-zsh/custom/themes/
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
-mkdir -p ~/.oh-my-zsh/custom/themes
-cp -r ./oh-my-zsh/custom/themes/* ~/.oh-my-zsh/custom/themes/
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 echo "Copying zshrc"
 rm -rf ~/.zshrc
@@ -49,6 +49,14 @@ echo "Installing JankyBorders and setting it up"
 brew tap FelixKratz/formulae
 brew install borders
 brew services start borders
+
+echo "Installing sleepwatcher and bluetils"
+brew install blueutil
+brew install sleepwatcher
+rm -rf ~/.sleep ~/.wakeup
+ln -s $(pwd)/sleepwatcher/wakeup ~/.wakeup
+ln -s $(pwd)/sleepwatcher/sleep ~/.sleep
+
 
 
 
