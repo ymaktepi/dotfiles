@@ -18,6 +18,6 @@ Install for macos
         - Enable those modifications in karabiner
 - Install raycast
 - Uncheck “when switching to application….”, “automatically rearrange spaces based on most recent use”, check “hide and
-  show dock”
+  show dock”, check "displays have separate spaces"
 - run `install_macos.sh`
     - run post install stuff described at the end of script
