@@ -25,6 +25,9 @@ mkdir -p ~/.vim/colors
 ln -s $(pwd)/vim/nord.vim ~/.vim/colors/nord.vim
 git config --global core.editor "vim"
 
+rm -rf ~/.ideavimrc
+ln -s $(pwd)/vim/ideavimrc ~/.ideavimrc
+
 echo "Setting up git"
 rm -rf ~/.gitignore_global
 ln -s $(pwd)/git/gitignore_global ~/.gitignore_global
