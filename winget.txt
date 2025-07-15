@@ -1,0 +1,15 @@
+winget install -e --id Spotify.Spotify
+winget install -e --id Mozilla.Firefox
+winget install -e --id AgileBits.1Password
+winget install -e --id Discord.Discord
+winget install -e --id TeamSpeakSystems.TeamSpeakClient
+winget install -e --id Microsoft.PowerToys
+winget install -e --id RiotGames.LeagueOfLegends.EUW
+winget install -e --id Telegram.TelegramDesktop
+winget install -e --id Valve.Steam
+winget install -e --id VideoLAN.VLC
+winget install -e --id Almico.SpeedFan
+# install windows media features if you installed windows N
+wsl --install
+winget install -e --id OpenWhisperSystems.Signal
+winget install -e --id CPUID.HWMonitor
