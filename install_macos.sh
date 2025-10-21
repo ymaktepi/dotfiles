@@ -61,6 +61,9 @@ ln -s $(pwd)/sleepwatcher/wakeup ~/.wakeup
 ln -s $(pwd)/sleepwatcher/sleep ~/.sleep
 
 
+brew install spotify_player
+rm -rf ~/.config/spotify_player/app.toml
+ln -s $(pwd)/spotify_player/app.toml ~/.config/spotify_player/app.toml
 
 
 echo "
